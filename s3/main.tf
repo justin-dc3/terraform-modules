@@ -71,11 +71,11 @@ resource "aws_s3_bucket" "${var.name}" {
     bucket = "${var.name}"
 
     versioning {
-        enabled = ${var.versioning_enabled}
+        enabled = "${var.versioning_enabled}"
     }
 
     lifecycle {
-        prevent_destroy = ${var.prevent_destroy}
+        prevent_destroy = "${var.prevent_destroy}"
     }
 }
 
