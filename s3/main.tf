@@ -1,55 +1,55 @@
 variable "provider" {
-    description "Cloud service provider (default aws)"
-    default "aws"
+    description = "Cloud service provider (default aws)"
+    default = "aws"
 }
 
 variable "env" {
-    description "Deployment environment (default stage)"
-    default "stage"
+    description = "Deployment environment (default stage)"
+    default = "stage"
 }
 output "env" {
-    value "${var.env}"
+    value = "${var.env}"
 }
 
 variable "region" {
-    description "Deployment region (default us-east-1)"
-    default "us-east-1"
+    description = "Deployment region (default us-east-1)"
+    default = "us-east-1"
 }
 output "region" {
-    value "${var.region}"
+    value = "${var.region}"
 }
 
 variable "shared_credentials_file" {
-    description "Location of provider credentials file"
-    default "~/.aws/credentials"
+    description = "Location of provider credentials file"
+    default = "~/.aws/credentials"
 }
 
 variable "profile" {
-    default "Credentials profile"
-    default "terraform@448905052389"
+    default = "Credentials profile"
+    default = "terraform@448905052389"
 }
 
 variable "name" {
-    description "Bucket name/identifier"
+    description = "Bucket name/identifier"
 }
 output "bucket name" {
-    value "${var.name}"
+    value = "${var.name}"
 }
 
 variable "versioning_enabled" {
-    description "Boolean - enable versioning? (default true)"
-    default true
+    description = "Boolean - enable versioning? (default true)"
+    default = true
 }
 output "versioning enabled" {
-    value "${var.versioning_enabled}"
+    value = "${var.versioning_enabled}"
 }
 
 variable "prevent_destroy" {
-    description "Boolean - terraform destroy blocked? (default true)"
-    default true
+    description = "Boolean - terraform destroy blocked? (default true)"
+    default = true
 }
 output "prevent destroy enabled" {
-    value "${var.prevent_destroy}"
+    value = "${var.prevent_destroy}"
 }
 
 terraform {
