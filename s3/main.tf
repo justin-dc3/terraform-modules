@@ -53,7 +53,7 @@ output "prevent destroy enabled" {
 }
 
 terraform {
-    backend = "s3" {
+    backend "s3" {
         bucket = "justin-dc3-dev-terraform-state"
         key    = "${var.env}/${var.region}/s3/${var.name}/terraform.state"
         region = "${var.region}"
